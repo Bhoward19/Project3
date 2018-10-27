@@ -27,11 +27,12 @@ app.get('/api/consoles', function(req, res){
 });
 
 app.post('/api/consoles', function(req, res){
-    consoles.addConsoles(Consoles, function(err, Consoles){
+    consoles.addConsoles(consoles, function(err, consoles){
         if(err){
             throw err;
         }
-        res.json(Consoles);
+        res.json(consoles);
+        
 
     })
 
